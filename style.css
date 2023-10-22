@@ -1,0 +1,230 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  font-family: "Roboto Mono", sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header,
+section {
+  min-height: 100vh;
+  overflow-y: auto;
+  height: max-content;
+}
+
+section:nth-child(2n) {
+  /* background-color: #ededed; */
+  background: linear-gradient(-45deg, #ff5733, #f13c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5.2rem 0rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.btn {
+  padding: 1rem 1.4rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border-radius: 1rem;
+  color: black;
+}
+
+.hero {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .logo-container {
+  height: 15rem;
+  width: 15rem;
+  background: transparent;
+  position: relative;
+}
+
+.hero .logo-container img {
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+  user-select: none;
+  mix-blend-mode: lighten;
+  filter: invert(1);
+}
+
+.hero .hero-name {
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(-45deg, #0f0e0d, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about > p {
+  max-width: 60rem;
+}
+
+.about-content {
+  gap: 1rem;
+  max-width: 40rem;
+}
+
+.about-content article {
+  flex-direction: column;
+}
+
+.about-content-divider {
+  border: 2px dashed black;
+}
+
+section.crafts article {
+  gap: 24px;
+  margin-top: 24px;
+}
+
+section.crafts img {
+  height: 200px;
+}
+
+.contact ul {
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.contact ul > li {
+  display: inline-block;
+}
+
+box-icon {
+  height: 2rem;
+  font-size: 2rem;
+}
+
+h1,
+h2 {
+  font-size: 3rem;
+}
+
+section:nth-child(2n-1) > h1,
+section:nth-child(2n-1) > h2,
+section:nth-child(2n-1) > h3,
+section:nth-child(2n-1) > h4 {
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.craft-card {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+  padding-right: 1rem;
+}
+
+.craft-card img {
+  transition: all 200ms ease-in-out;
+}
+
+.craft-card:hover img {
+  transform: scale(1.1);
+}
+
+.craft-card ul {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+}
+
+.craft-card li {
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.craft-card li::before {
+  content: "#";
+  margin-right: 4px;
+}
+
+.craft-card li:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: black;
+}

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Maven+Pro&family=VT323&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Maven Pro", sans-serif;
+    background: #f1f1f1;
+    color: #333;
+    letter-spacing: 1px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0078d4;
+  }
+  
+  header, section {
+    color: #ecf4f4;
+    min-height: 100vh;
+    overflow-y: auto;
+    height: max-content;
+  }
+  
+  span {
+    color: #333;
+    border: 3px solid #a94e4e;
+    padding: 1px 3px;
+    background-color: #a94e4e;
+    font-family: 'VT323', monospace;
+  }
+
+  .hero { 
+    background-image: url(image/hero4.jpg);
+    background-size: cover;
+    /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
+    /* height: 95vh; */
+  }
+
+  .hero a {
+    font-size: large;
+    border: 3px solid #a94e4e;
+    text-decoration: none;
+    border-radius: 12px 50px 50px;
+    padding: 8px 30px;
+    color: #a94e4e;
+    background-color: #333;
+    text-transform: capitalize;
+  }
+
+  .hero p {
+    font-size: large;
+  }
+
+  section:nth-child(2n) {
+    background: #2c2328;
+  }
+  
+  section {
+    background-color: #38272f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5.2rem 0rem;
+  }
+
+  .border {
+    border-left: 2px dashed #974849;
+  }
+
+  .flex-center {
+    /* border-left: 2px solid white;
+    border-left-style: dashed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-justify-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .text-align-center {
+    text-align: center;
+  }
+  
+  .flex-align-items-center {
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 1rem 1.4rem;
+    background: #0078d4;
+    border-radius: 1rem;
+    color: white;
+  }
+  
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero .logo-container {
+    height: 15rem;
+    width: 15rem;
+    background: #0078d4;
+    position: relative;
+  }
+  
+  .hero .logo-container img {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+    user-select: none;
+    mix-blend-mode: lighten;
+    filter: invert(1);
+  }
+  
+  .hero .hero-name {
+    font-family: "Arial, sans-serif";
+    background: #0078d4;
+    color: white;
+  }
+  
+  .about > p {
+    max-width: 60rem;
+  }
+  
+  .about-content {
+    gap: 1rem;
+    max-width: 40rem;
+  }
+  
+  .about-content article {
+    flex-direction: column;
+  }
+  
+  /* .about-content-divider {
+    border: 2px dashed #a94e4e;
+  } */
+  
+  section.crafts article {
+    gap: 24px;
+    margin-top: 24px;
+  }
+  
+  section.crafts img {
+    height: 200px;
+  }
+  
+  .contact ul {
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .contact ul > li {
+    display: inline-block;
+  }
+  
+  box-icon {
+    height: 2rem;
+    font-size: 2rem;
+  }
+  
+  h1, h2 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 20px 0;
+    /* color: #00539f; */
+    text-shadow: 2px 1px 1px #974849;
+  }
+
+  h1, h2, h3, h4{
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  h3 {
+    color: #a94e4e;
+  }
+  
+  section:nth-child(2n-1) > h1,
+  section:nth-child(2n-1) > h2,
+  section:nth-child(2n-1) > h3,
+  section:nth-child(2n-1) > h4 {
+    /* font-family: "Arial, sans-serif"; */
+    /* background: #0078d4; */
+    color: white;
+  }
+  
+  .craft-card {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    padding-right: 1rem;
+  }
+  
+  .craft-card img {
+    transition: all 200ms ease-in-out;
+  }
+  
+  .craft-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .craft-card ul {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0;
+  }
+  
+  .craft-card li {
+    padding: 0.4rem 0.8rem;
+    background: #0078d4;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .craft-card li::before {
+    content: "#";
+    margin-right: 4px;
+  }
+  
+  .craft-card li:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(0, 120, 212, 0.5);
+  }
+
+  .socials {
+    font-size: large;
+    border: 3px solid #a94e4e;
+    text-decoration: none;
+    border-radius: 12px 50px 50px;
+    padding: 8px 30px;
+    color: #a94e4e;
+    background-color: #333;
+    text-transform: capitalize;
+  }
+  
+  footer {
+    color: white;
+    background-color: #38272f;
+  }
