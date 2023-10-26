@@ -33,6 +33,7 @@ html, body {
   .hero { 
     background-image: url(image/hero4.jpg);
     background-size: cover;
+    background-attachment: fixed;
     /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
     /* height: 95vh; */
   }
